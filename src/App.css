@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    grid-template-columns: 200px 1fr;
+    grid-template-areas: 
+    "header header"
+    "watchlist content";
+    height: 100vh;
+}
+
+.header {
+    grid-area: header;
+    background-color: rgb(45, 38, 22);
+}
+
+.header h1 {
+    padding-left: 30px;
+}
+
+.content-container {
+    grid-area: content;
+    background-color: rgb(62, 62, 62);
+}
+
+.content-container .controls {
+    display: flex;
+    padding: 20px;
+    border: solid 1px blue;
+}
+
+.content-container .watchlist {
+    grid-area: watchlist;
+    background-color: rgb(56, 56, 56);
+}
+
+.content-container .asteroid-container {
+    grid-area: asteroid-container;
+}
+
+.content-container .asteroid-container .asteroid-card {
+    padding: 20px;
+    margin: 15px;
+    border-radius: 10px;
+    color: black;
+    background-color: rgb(204, 204, 204);
+}
+
+.content-container .asteroid-container .asteroid-card ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    padding-left: 0;
+}
+
+.content-container .asteroid-container .asteroid-card .card-controls .track {
+    width: 100%;
+}
