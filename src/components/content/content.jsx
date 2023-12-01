@@ -1,15 +1,18 @@
-import { createContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import RenderAsteroids from "./subcomponents/renderAsteroids";
 import Watch from "./subcomponents/watch"
 
 export const TrackedContext = createContext() 
 
 export default function Content() {
-    const [tracked, setTracked] = useState([])
+    const [tracked, setTracked] = useState(localStorage)
+    const [activePage, setActivePage] = useState(null)
 
+    console.log(tracked)
+    
     return (
         <>
-        <TrackedContext.Provider value={{tracked, setTracked}}>
+        <TrackedContext.Provider value={{tracked, setTracked, activePage, setActivePage}}>
             <Watch/>
             <div className="content-container">
                 <div className="controls">
