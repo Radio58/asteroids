@@ -1,4 +1,11 @@
+import { useContext } from 'react'
+import TrackedContext from '../content'
+
 export default function AsteroidCard({name, magniutde, hazardous, approachDate, missDistance, estDiameter}) {
+    const tracked = useContext(TrackedContext)
+    // if tracked change button name to Untrack
+    console.log(tracked)
+
 
     return (
         <>

@@ -29,7 +29,6 @@
 .content-container .controls {
     display: flex;
     padding: 20px;
-    border: solid 1px blue;
 }
 
 .content-container .watchlist {
